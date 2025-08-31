@@ -1,26 +1,12 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="assets/icons/icon-96.png">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
-<meta property="og:title" content="Aden Stor — Premium On‑Demand Fashion & Beauty">
-<meta property="og:description" content="Gulf-first, world-class: fashion • beauty • accessories, made for you.">
-<meta property="og:image" content="assets/icons/icon-512.png">
-<meta name="twitter:card" content="summary_large_image">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); }
-</script>
-<style>
-  :root{{--gold:#D4AF37}}
-  body{{font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}}
-  .gold{{color:var(--gold)}}
-  .bg-gold{{background-color:var(--gold)}}
-</style>
-<title>Aden Stor — Track</title></head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aden Stor — تتبع الطلب</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
 <body class="bg-white text-black">
 
 <header class="bg-black text-white">
@@ -29,19 +15,18 @@
       <img src="assets/img/logo.svg" alt="Aden Stor" class="h-10">
     </a>
     <nav class="flex gap-5 text-sm">
-      <a href="catalog.html" id="nav_catalog" class="hover:underline">الكتالوج</a>
-      <a href="custom.html" id="nav_custom" class="hover:underline">تصنيع حسب الطلب</a>
-      <a href="track.html" id="nav_track" class="hover:underline">تتبع الطلب</a>
-      <a href="settings.html" id="nav_settings" class="hover:underline">إعدادات</a>
+      <a href="catalog.html" class="hover:underline">الكتالوج</a>
+      <a href="custom.html" class="hover:underline">تصنيع حسب الطلب</a>
+      <a href="track.html" class="hover:underline">تتبع الطلب</a>
     </nav>
   </div>
 </header>
 
 <section class="max-w-3xl mx-auto px-6 py-10">
-  <h1 class="text-3xl font-bold mb-6" id="track_title">تتبع الطلب</h1>
+  <h1 class="text-3xl font-bold mb-6">تتبع الطلب</h1>
   <form id="trackForm" class="flex gap-3">
-    <input id="code" class="flex-1 border rounded-lg px-3 py-2" placeholder="AS-ABCD-1234">
-    <button class="bg-black text-white px-4 rounded-lg" id="search">بحث</button>
+    <input id="code" class="flex-1 border rounded-lg px-3 py-2" placeholder="أدخل رمز التتبع (مثل: AS-ABCD-1234)">
+    <button class="bg-black text-white px-4 rounded-lg">بحث</button>
   </form>
   <div id="info" class="mt-6"></div>
 </section>
@@ -53,21 +38,41 @@
       <p class="text-gray-300">Aden Stor — Premium On‑Demand Fashion & Beauty</p>
     </div>
     <div>
-      <p class="font-semibold mb-2">روابط</p>
+      <p class="font-semibold mb-2">روابط سريعة</p>
       <ul class="space-y-1">
-        <li><a href="catalog.html" class="text-gray-300 hover:text-white" id="nav_catalog_f">الكتالوج</a></li>
-        <li><a href="custom.html" class="text-gray-300 hover:text-white" id="nav_custom_f">تصنيع حسب الطلب</a></li>
-        <li><a href="track.html" class="text-gray-300 hover:text-white" id="nav_track_f">تتبع الطلب</a></li>
+        <li><a href="catalog.html" class="text-gray-300 hover:text-white">الكتالوج</a></li>
+        <li><a href="custom.html" class="text-gray-300 hover:text-white">تصنيع حسب الطلب</a></li>
+        <li><a href="track.html" class="text-gray-300 hover:text-white">تتبع الطلب</a></li>
       </ul>
     </div>
     <div>
-      <p class="text-gray-300" id="footer_pay">بوابات الدفع لاحقاً: PayTabs • HyperPay • KNET</p>
-      <p class="text-gray-300" id="footer_ship">الشحن: DHL • Aramex • Fetchr</p>
+      <p class="font-semibold mb-2">الدفع والشحن</p>
+      <p class="text-gray-300">دعم لاحق لـ PayTabs • HyperPay • KNET</p>
+      <p class="text-gray-300">الشحن عبر DHL • Aramex • Fetchr</p>
     </div>
   </div>
   <div class="text-center text-gray-400 text-xs border-t border-gray-800 py-3">© 2025 Aden Stor</div>
 </footer>
-<script src="assets/js/app.js"></script>
 
-<script src="assets/js/track.js"></script>
-</body></html>
+<script>
+document.getElementById('trackForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  const code = document.getElementById('code').value.trim();
+  const all = JSON.parse(localStorage.getItem('aden_orders')||'[]');
+  const found = all.find(o => o.code === code);
+  const info = document.getElementById('info');
+  if (found) {
+    info.innerHTML = `
+      <div class="border rounded-xl p-4">
+        <div class="font-semibold">الحالة: ${found.status}</div>
+        <div class="text-sm text-gray-600 mt-1">الاسم: ${found.name||''} — الهاتف: ${found.phone||''}</div>
+        <div class="mt-2">${found.details||''}</div>
+      </div>
+    `;
+  } else {
+    info.innerHTML = '<div class="text-red-600">لم يتم العثور على طلب بهذا الرمز.</div>';
+  }
+});
+</script>
+</body>
+</html>

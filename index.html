@@ -1,26 +1,21 @@
+
 <!doctype html>
 <html lang="ar" dir="rtl">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<link rel="icon" href="assets/icons/icon-96.png">
-<link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#000000">
-<meta property="og:title" content="Aden Stor — Premium On‑Demand Fashion & Beauty">
-<meta property="og:description" content="Gulf-first, world-class: fashion • beauty • accessories, made for you.">
-<meta property="og:image" content="assets/icons/icon-512.png">
-<meta name="twitter:card" content="summary_large_image">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  if ('serviceWorker' in navigator) { navigator.serviceWorker.register('service-worker.js'); }
-</script>
-<style>
-  :root{{--gold:#D4AF37}}
-  body{{font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial}}
-  .gold{{color:var(--gold)}}
-  .bg-gold{{background-color:var(--gold)}}
-</style>
-<title>Aden Stor</title></head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Aden Stor</title>
+  <link rel="icon" href="assets/img/logo.svg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root{--gold:#D4AF37}
+    body{font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji'}
+    .gold{color: var(--gold)}
+    .bg-gold{background-color: var(--gold)}
+  </style>
+
+</head>
 <body class="bg-white text-black">
 
 <header class="bg-black text-white">
@@ -29,10 +24,9 @@
       <img src="assets/img/logo.svg" alt="Aden Stor" class="h-10">
     </a>
     <nav class="flex gap-5 text-sm">
-      <a href="catalog.html" id="nav_catalog" class="hover:underline">الكتالوج</a>
-      <a href="custom.html" id="nav_custom" class="hover:underline">تصنيع حسب الطلب</a>
-      <a href="track.html" id="nav_track" class="hover:underline">تتبع الطلب</a>
-      <a href="settings.html" id="nav_settings" class="hover:underline">إعدادات</a>
+      <a href="catalog.html" class="hover:underline">الكتالوج</a>
+      <a href="custom.html" class="hover:underline">تصنيع حسب الطلب</a>
+      <a href="track.html" class="hover:underline">تتبع الطلب</a>
     </nav>
   </div>
 </header>
@@ -40,11 +34,11 @@
 <section class="bg-black text-white">
   <div class="max-w-6xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
     <div>
-      <h1 class="text-4xl md:text-5xl font-bold leading-snug" id="hero_title">بوابتك إلى الموضة والجمال <span class="gold">حسب الطلب</span></h1>
-      <p class="text-gray-300 mt-4" id="hero_sub">منصة خليجية بهوية عالمية: ملابس • تجميل • إكسسوارات تُصنع لك</p>
+      <h1 class="text-4xl md:text-5xl font-bold leading-snug">بوابتك إلى الموضة والجمال <span class="gold">حسب الطلب</span></h1>
+      <p class="text-gray-300 mt-4">Aden Stor — منصة خليجية بهوية عالمية: ملابس، مواد تجميل، وإكسسوارات تُصنع لك.</p>
       <div class="mt-6 flex gap-4">
-        <a href="catalog.html" class="bg-gold text-black px-6 py-3 rounded-lg font-semibold" id="btn_catalog">استعرض الكتالوج</a>
-        <a href="custom.html" class="border border-white px-6 py-3 rounded-lg" id="btn_custom">اطلب تصميمك الخاص</a>
+        <a href="catalog.html" class="bg-gold text-black px-6 py-3 rounded-lg font-semibold">استعرض الكتالوج</a>
+        <a href="custom.html" class="border border-white px-6 py-3 rounded-lg">اطلب تصميمك الخاص</a>
       </div>
     </div>
     <div class="bg-neutral-900 rounded-2xl p-6">
@@ -52,22 +46,16 @@
     </div>
   </div>
 </section>
+
 <section class="max-w-6xl mx-auto px-6 py-14">
-  <h2 class="text-2xl font-bold mb-6" id="why_title">لماذا Aden Stor؟</h2>
+  <h2 class="text-2xl font-bold mb-6">لماذا Aden Stor؟</h2>
   <div class="grid md:grid-cols-3 gap-6">
-    <div class="border rounded-xl p-5"><p class="font-semibold" id="why_1_t">تصنيع حسب الطلب</p><p class="text-gray-600 mt-2" id="why_1_d">رفع التصميم • اختيار الخامات • تسعير فوري</p></div>
-    <div class="border rounded-xl p-5"><p class="font-semibold" id="why_2_t">هوية خليجية</p><p class="text-gray-600 mt-2" id="why_2_d">دفع وشحن مناسب للخليج واليمن</p></div>
-    <div class="border rounded-xl p-5"><p class="font-semibold" id="why_3_t">تجربة فاخرة</p><p class="text-gray-600 mt-2" id="why_3_d">تصميم بسيط وأنيق وسريع</p></div>
+    <div class="border rounded-xl p-5"><p class="font-semibold">تصنيع حسب الطلب</p><p class="text-gray-600 mt-2">رفع التصميم، اختيار الخامات، تسعير فوري (نسخة مبدئية).</p></div>
+    <div class="border rounded-xl p-5"><p class="font-semibold">هوية خليجية</p><p class="text-gray-600 mt-2">دفع وشحن يناسب الخليج واليمن (يُفعّل لاحقًا).</p></div>
+    <div class="border rounded-xl p-5"><p class="font-semibold">تجربة فاخرة</p><p class="text-gray-600 mt-2">تصميم بسيط، أنيق، وسريع.</p></div>
   </div>
 </section>
-<section class="max-w-6xl mx-auto px-6 pb-16">
-  <h3 class="text-xl font-bold mb-4" id="shipping_est">تقدير الشحن</h3>
-  <div class="grid md:grid-cols-3 gap-4">
-    <div class="border rounded-xl p-4"><b id="country">الدولة</b><div>SA, AE, KW, QA, BH, OM, YE</div></div>
-    <div class="border rounded-xl p-4"><b id="est_days">أيام التوصيل التقديرية</b><div>2–5 (GCC) • 5–10 (YE)</div></div>
-    <div class="border rounded-xl p-4"><b id="cost">التكلفة التقريبية</b><div>8–20 USD (GCC) • 10–25 USD (YE)</div></div>
-  </div>
-</section>
+
 
 <footer class="bg-black text-white mt-16">
   <div class="max-w-6xl mx-auto p-6 grid md:grid-cols-3 gap-6 text-sm">
@@ -76,20 +64,22 @@
       <p class="text-gray-300">Aden Stor — Premium On‑Demand Fashion & Beauty</p>
     </div>
     <div>
-      <p class="font-semibold mb-2">روابط</p>
+      <p class="font-semibold mb-2">روابط سريعة</p>
       <ul class="space-y-1">
-        <li><a href="catalog.html" class="text-gray-300 hover:text-white" id="nav_catalog_f">الكتالوج</a></li>
-        <li><a href="custom.html" class="text-gray-300 hover:text-white" id="nav_custom_f">تصنيع حسب الطلب</a></li>
-        <li><a href="track.html" class="text-gray-300 hover:text-white" id="nav_track_f">تتبع الطلب</a></li>
+        <li><a href="catalog.html" class="text-gray-300 hover:text-white">الكتالوج</a></li>
+        <li><a href="custom.html" class="text-gray-300 hover:text-white">تصنيع حسب الطلب</a></li>
+        <li><a href="track.html" class="text-gray-300 hover:text-white">تتبع الطلب</a></li>
       </ul>
     </div>
     <div>
-      <p class="text-gray-300" id="footer_pay">بوابات الدفع لاحقاً: PayTabs • HyperPay • KNET</p>
-      <p class="text-gray-300" id="footer_ship">الشحن: DHL • Aramex • Fetchr</p>
+      <p class="font-semibold mb-2">الدفع والشحن</p>
+      <p class="text-gray-300">دعم لاحق لـ PayTabs • HyperPay • KNET</p>
+      <p class="text-gray-300">الشحن عبر DHL • Aramex • Fetchr</p>
     </div>
   </div>
   <div class="text-center text-gray-400 text-xs border-t border-gray-800 py-3">© 2025 Aden Stor</div>
 </footer>
-<script src="assets/js/app.js"></script>
 
-</body></html>
+<script src="assets/js/app.js"></script>
+</body>
+</html>
