@@ -1,0 +1,52 @@
+[
+  {
+    "id": "D001",
+    "name_ar": "فستان سهرة ذهبي",
+    "name_en": "Golden Evening Dress",
+    "price_usd": 299,
+    "category": "fashion",
+    "desc_ar": "فستان فاخر بخامة حرير فاخرة.",
+    "desc_en": "Luxury silk evening dress.",
+    "img": "logo.svg"
+  },
+  {
+    "id": "B101",
+    "name_ar": "مجموعة عناية بالبشرة",
+    "name_en": "Skincare Deluxe Set",
+    "price_usd": 149,
+    "category": "beauty",
+    "desc_ar": "روتين متكامل للعناية بالبشرة.",
+    "desc_en": "Complete skincare routine.",
+    "img": "logo.svg"
+  },
+  {
+    "id": "A501",
+    "name_ar": "سوار ذهبي فاخر",
+    "name_en": "Luxury Gold Bracelet",
+    "price_usd": 199,
+    "category": "accessories",
+    "desc_ar": "سوار مطلي بالذهب بتصميم أنيق.",
+    "desc_en": "Gold-plated elegant bracelet.",
+    "img": "logo.svg"
+  },
+  {
+    "id": "D002",
+    "name_ar": "عباية كلاسيك",
+    "name_en": "Classic Abaya",
+    "price_usd": 179,
+    "category": "fashion",
+    "desc_ar": "عباية أنيقة بقصة كلاسيكية.",
+    "desc_en": "Elegant classic abaya.",
+    "img": "logo.svg"
+  },
+  {
+    "id": "B205",
+    "name_ar": "أحمر شفاه مات",
+    "name_en": "Matte Lipstick",
+    "price_usd": 29,
+    "category": "beauty",
+    "desc_ar": "تغطية كاملة بلمسة نهائية مطفية.",
+    "desc_en": "Full coverage matte finish.",
+    "img": "logo.svg"
+  }
+]

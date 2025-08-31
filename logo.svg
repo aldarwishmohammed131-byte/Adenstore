@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 256">
+  <rect width="1024" height="256" fill="#000"/>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-size="84" fill="#FFFFFF"
+        letter-spacing="4">ADEN <tspan fill="#D4AF37">STOR</tspan></text>
+  <text x="50%" y="80%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#D4AF37"
+        letter-spacing="4">FASHION • BEAUTY • ACCESSORIES</text>
+</svg>
